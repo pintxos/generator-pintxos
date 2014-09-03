@@ -1,7 +1,7 @@
 {
   "name": "<%= packageName %>",
   "version": "0.0.0",
-  "homepage": "https://github.com/pintxos/<%= componentName %>"
+  "homepage": "https://github.com/pintxos/<%= componentName %>",
   "ignore": [
     "**/.*",
     "node_modules",
