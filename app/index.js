@@ -33,14 +33,14 @@ var PintxosGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      
+
       this.tplData = {
         componentName: props.componentName,
         packageName: 'pintxos-' + props.componentName.toLowerCase(),
         author: props.author,
         email: props.email
       };
-      
+
       done();
 
     }.bind(this));
@@ -48,11 +48,14 @@ var PintxosGenerator = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
+
       this.dest.mkdir('test');
-      console.log(this.tplData)
+
+      this.template('_index.js', 'index.js', this.tplData);
       this.template('_README.md', 'README.md', this.tplData);
       this.template('_bower.json', 'bower.json', this.tplData);
       this.template('_package.json', 'package.json', this.tplData);
+
     },
   },
 
