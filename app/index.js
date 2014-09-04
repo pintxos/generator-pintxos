@@ -51,6 +51,8 @@ var PintxosGenerator = yeoman.generators.Base.extend({
 
       this.dest.mkdir('test');
 
+      this.src.copy('_.travis.yml', '.travis.yml');
+
       this.template('_index.js', 'index.js', this.tplData);
       this.template('_README.md', 'README.md', this.tplData);
       this.template('_bower.json', 'bower.json', this.tplData);
