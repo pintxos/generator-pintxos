@@ -5,7 +5,6 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 
 		karma: {
-
 			options: {
 				basePath: '',
 				files: [
@@ -16,20 +15,19 @@ module.exports = function (grunt) {
 					'jasmine'
 				]
 			},
-
 			dev: {
 				browsers: ['Chrome']	
 			},
-
 			ci: {
 				browsers: ['PhantomJS'],
 				singleRun: true
 			}
 		},
-
+		
 		jshint: {
 			files: ['*.js'],
 			options: {
+				strict: true,
 				es3: true
 			}
 		}
