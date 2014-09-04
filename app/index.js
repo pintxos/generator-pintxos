@@ -57,6 +57,7 @@ var PintxosGenerator = yeoman.generators.Base.extend({
       this.template('_README.md', 'README.md', this.tplData);
       this.template('_bower.json', 'bower.json', this.tplData);
       this.template('_package.json', 'package.json', this.tplData);
+      this.template('_Gruntfile.js', 'Gruntfile.js', this.tplData);
 
     },
   },
