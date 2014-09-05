@@ -22,7 +22,10 @@ describe('pintxos:app', function () {
       'bower.json',
       'package.json',
       '.editorconfig',
-      '.jshintrc'
+      'Gruntfile.js',
+      'README.md',
+      'index.js',
+      '.travis.yml'
     ]);
   });
 });
