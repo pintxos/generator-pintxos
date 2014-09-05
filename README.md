@@ -1,4 +1,4 @@
-# generator-pintxos [![Build Status](https://secure.travis-ci.org/vejersele/generator-pintxos.png?branch=master)](https://travis-ci.org/vejersele/generator-pintxos)
+# generator-pintxos [![Build Status](https://travis-ci.org/pintxos/generator-pintxos.svg)](https://travis-ci.org/pintxos/generator-pintxos)
 
 > [Yeoman](http://yeoman.io) generator
 
