@@ -1,16 +1,16 @@
 {
-  "name": "<%= packageName %>",
-  "version": "0.0.0",
-  "homepage": "https://github.com/pintxos/<%= componentName %>",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test"
-  ],
-  "authors": [
-    "<%= author %>"
-  ],
-  "dependencies": {}
+	"name": "<%= packageName %>",
+	"version": "0.0.0",
+	"homepage": "https://github.com/pintxos/<%= componentName %>",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test"
+	],
+	"authors": [
+		"<%= author %>"
+	],
+	"dependencies": {}
 }
 

@@ -5,67 +5,70 @@ var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 
 var PintxosGenerator = yeoman.generators.Base.extend({
-  initializing: function () {
-    this.pkg = require('../package.json');
-  },
 
-  prompting: function () {
-    var done = this.async();
+	initializing: function () {
+		this.pkg = require('../package.json');
+	},
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the astonishing Pintxos generator!'
-    ));
+	prompting: function () {
 
-    var prompts = [{
-      type: 'input',
-      name: 'componentName',
-      message: 'What is the name of the Pintxos component you are about to start building?',
-      default: this.appname
-    }, {
-      type: 'input',
-      name: 'author',
-      message: 'Could you tell me the author\'s name?'
-    }, {
-      type: 'input',
-      name: 'email',
-      message: 'Can I also get his or her e-mail address?'
-    }];
+		var done = this.async();
 
-    this.prompt(prompts, function (props) {
+		// Have Yeoman greet the user.
+		this.log(yosay(
+			'Welcome to the astonishing Pintxos generator!'
+		));
 
-      this.tplData = {
-        componentName: props.componentName,
-        packageName: 'pintxos-' + props.componentName.toLowerCase(),
-        author: props.author,
-        email: props.email
-      };
+		var prompts = [{
+			type: 'input',
+			name: 'componentName',
+			message: 'What is the name of the Pintxos component you are about to start building?',
+			default: this.appname
+		}, {
+			type: 'input',
+			name: 'author',
+			message: 'Could you tell me the author\'s name?'
+		}, {
+			type: 'input',
+			name: 'email',
+			message: 'Can I also get his or her e-mail address?'
+		}];
 
-      done();
+		this.prompt(prompts, function (props) {
 
-    }.bind(this));
-  },
+			this.tplData = {
+				componentName: props.componentName,
+				packageName: 'pintxos-' + props.componentName.toLowerCase(),
+				author: props.author,
+				email: props.email
+			};
 
-  writing: {
-    app: function () {
+			done();
 
-      this.dest.mkdir('test');
+		}.bind(this));
+	},
 
-      this.src.copy('_.travis.yml', '.travis.yml');
+	writing: {
+		app: function () {
 
-      this.template('_index.js', 'index.js', this.tplData);
-      this.template('_README.md', 'README.md', this.tplData);
-      this.template('_bower.json', 'bower.json', this.tplData);
-      this.template('_package.json', 'package.json', this.tplData);
-      this.template('_Gruntfile.js', 'Gruntfile.js', this.tplData);
-      this.template('_.editorconfig', '.editorconfig', this.tplData);
+			this.dest.mkdir('test');
 
-    },
-  },
+			this.src.copy('_.travis.yml', '.travis.yml');
 
-  end: function () {
-    this.installDependencies();
-  }
+			this.template('_index.js', 'index.js', this.tplData);
+			this.template('_README.md', 'README.md', this.tplData);
+			this.template('_bower.json', 'bower.json', this.tplData);
+			this.template('_package.json', 'package.json', this.tplData);
+			this.template('_Gruntfile.js', 'Gruntfile.js', this.tplData);
+			this.template('_.editorconfig', '.editorconfig', this.tplData);
+
+		},
+	},
+
+	end: function () {
+		this.installDependencies();
+	}
+
 });
 
 module.exports = PintxosGenerator;
