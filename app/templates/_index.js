@@ -1,49 +1,55 @@
-// UMD
-if(typeof define !== 'function') {
-	define = function( deps, definition ) {
-		window.pintxos = window.pintxos || {};
-		window.pintxos.<%= componentName %> = definition();
-		define = null;
-	};
-}
-
-define([], function () {
+(function (window) {
 
 	'use strict';
 
-	/* Constructor
-	----------------------------------------------- */
-	var <%= componentName %> = function () {
+	// UMD
+	if(typeof define !== 'function') {
+		define = function( deps, definition ) {
+			window.pintxos = window.pintxos || {};
+			window.pintxos.<%= componentName %> = definition();
+			define = null;
+		};
+	}
 
-	};
+	define([], function () {
 
+		'use strict';
 
-	/* Methods
-	----------------------------------------------- */
+		/* Constructor
+		----------------------------------------------- */
+		var <%= componentName %> = function () {
 
-	/**
-	 * All bootstrap logic should go here
-	 * @return {void}
-	 */
-	<%= componentName %>.prototype.init = function () {
-
-	};
-
-	/**
-	 * All teardown logic should go here
-	 * @return {void}
-	 */
-	<%= componentName %>.prototype.destroy = function () {
-
-	};
+		};
 
 
-	/* Event handlers
-	----------------------------------------------- */
+		/* Methods
+		----------------------------------------------- */
+
+		/**
+		 * All bootstrap logic should go here
+		 * @return {void}
+		 */
+		<%= componentName %>.prototype.init = function () {
+
+		};
+
+		/**
+		 * All teardown logic should go here
+		 * @return {void}
+		 */
+		<%= componentName %>.prototype.destroy = function () {
+
+		};
 
 
-	/* Export
-	----------------------------------------------- */
-	return <%= componentName %>;
+		/* Event handlers
+		----------------------------------------------- */
 
-});
+
+		/* Export
+		----------------------------------------------- */
+		return <%= componentName %>;
+
+	});
+
+})(this);
