@@ -13,7 +13,6 @@
 
 	define([], function () {
 
-		'use strict';
 
 		/* Constructor
 		----------------------------------------------- */
