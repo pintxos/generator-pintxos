@@ -25,6 +25,7 @@ describe('pintxos:app', function () {
 			'Gruntfile.js',
 			'README.md',
 			'index.js',
+			'.gitignore',
 			'.travis.yml'
 		]);
 	});
