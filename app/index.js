@@ -55,13 +55,15 @@ var PintxosGenerator = yeoman.generators.Base.extend({
 
 			this.src.copy('_.travis.yml', '.travis.yml');
 			this.src.copy('_.gitignore', '.gitignore');
+			this.src.copy('_.editorconfig', '.editorconfig');
+			this.src.copy('_Gruntfile.js', 'Gruntfile.js');
 
 			this.template('_index.js', 'index.js', this.tplData);
 			this.template('_README.md', 'README.md', this.tplData);
 			this.template('_bower.json', 'bower.json', this.tplData);
 			this.template('_package.json', 'package.json', this.tplData);
-			this.template('_Gruntfile.js', 'Gruntfile.js', this.tplData);
-			this.template('_.editorconfig', '.editorconfig', this.tplData);
+
+
 
 		},
 	},
