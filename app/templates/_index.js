@@ -4,7 +4,7 @@
 
 	// UMD
 	if(typeof define !== 'function') {
-		define = function( deps, definition ) {
+		window.define = function(deps, definition) {
 			window.pintxos = window.pintxos || {};
 			window.pintxos.<%= componentName %> = definition();
 			define = null;
