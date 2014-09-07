@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-	- '0.10'
+  - '0.10'
 branches:
-	only:
-		- master
+  only:
+	- master
 before_install:
-	- currentfolder=${PWD##*/}
-	- if [ "$currentfolder" != 'generator-pintxos' ]; then cd .. && eval "mv $currentfolder generator-pintxos" && cd generator-pintxos; fi
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-pintxos' ]; then cd .. && eval "mv $currentfolder generator-pintxos" && cd generator-pintxos; fi
 
