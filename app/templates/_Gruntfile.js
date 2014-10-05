@@ -1,8 +1,8 @@
 var config = {
-	testDependencies: {
+	testDependencies: [
 		'tests/*.js',
 		'index.js'
-	}
+	]
 };
 
 module.exports =  require('grunt-pintxos')(config);
