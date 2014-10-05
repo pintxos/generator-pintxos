@@ -14,9 +14,18 @@
 	define([], function () {
 
 
+		var <%= componentName %>, _defaults;
+
+		/* Default settings
+		----------------------------------------------- */
+		_defaults = {
+
+		};
+
+
 		/* Constructor
 		----------------------------------------------- */
-		var <%= componentName %> = function () {
+		<%= componentName %> = function () {
 
 		};
 
