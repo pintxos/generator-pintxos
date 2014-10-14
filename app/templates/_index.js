@@ -25,7 +25,7 @@
 
 		/* Constructor
 		----------------------------------------------- */
-		<%= componentName %> = function () {
+		<%= componentName %> = function (el, options) {
 
 		};
 
